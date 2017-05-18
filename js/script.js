@@ -8,6 +8,7 @@ function signIn() {
 	  var token = result.credential.accessToken;
 	  // The signed-in user info.
 	  var user = result.user;
+	  console.log('waiting for response!');
 	  console.log(user);
 	}).catch(function(error) {
 	  var errorCode = error.code;
