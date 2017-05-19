@@ -51,7 +51,6 @@
 		<script src="js/script.js"></script>
 		
 		<script>
-			// Initialize Firebase
 			var config = {
 				apiKey: "AIzaSyCeLb593nc4IMYNMNyr34GXwAKPK4nR_-Y",
 				authDomain: "web-app-ef470.firebaseapp.com",
@@ -60,20 +59,7 @@
 				storageBucket: "web-app-ef470.appspot.com",
 				messagingSenderId: "42779219816"
 			};
-		  
-		  
-			var uiConfig = {
-				'signInSuccessUrl': '<url-to-redirect-to-on-success>',
-				'signInOptions': [
-				firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-				],
-				'tosUrl': '< Terms of service url>',
-			};
-			var app = firebase.initializeApp(config);
-			var auth = app.auth();
-			var ui = new firebaseui.auth.AuthUI(auth);
-
-			ui.start(‘#firebaseui-auth-container’, uiConfig);
+			firebase.initializeApp(config);
 		</script>
 		
 		
