@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda+One');
 
+body{
+	background: rgb(219, 68, 55);
+}
 #sign-in-grid{
 	margin-top: 100px;
 	justify-content: center;
