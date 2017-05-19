@@ -64,12 +64,12 @@
 		
 		<script type="text/javascript">  
 			var uiConfig = {  
-				signInSuccessUrl: 'loggedIn.html',  
+				signInSuccessUrl: 'services.html',  
 				signInOptions: [  
 					firebase.auth.GoogleAuthProvider.PROVIDER_ID,  
 					firebase.auth.EmailAuthProvider.PROVIDER_ID  
 				],  
-			tosUrl: 'services.html'  
+			tosUrl: '<your-tos-url>'  
 			};  
 			var ui = new firebaseui.auth.AuthUI(firebase.auth());  
 			ui.start('#firebaseui-auth-container', uiConfig);  
