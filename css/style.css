@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda+One');
 
+#sign-in-grid{
+	margin-top: 120px;
+	justify-content: center;
+}
+
 #app-logo{
 	width:256px;
 	height: 50px;
