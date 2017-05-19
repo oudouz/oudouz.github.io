@@ -8,10 +8,11 @@
 		
 		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-		<script src=”https://www.gstatic.com/firebasejs/live/3.0/firebase-app.js"></script>
-		<script src=”https://www.gstatic.com/firebasejs/live/3.0/firebase-auth.js"></script>
-		<script src=”https://www.gstatic.com/firebasejs/ui/0.4.0/firebase-ui-auth.js"></script>
-		<link type=”text/css” rel=”stylesheet” href=”https://www.gstatic.com/firebasejs/ui/0.4.0/firebase-ui-auth.css" />	
+		<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/ui/0.4.0/firebase-ui-auth.js"></script>
+		<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/0.4.0/firebase-ui-auth.css" />
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" />
 		
 		<style>
 		.demo-card-event.mdl-card {
@@ -46,21 +47,34 @@
 		
     </head>
     <body>
-		<div id=”firebaseui-auth-container”></div>
+		<div id="firebaseui-auth-container"></div>
 		
-		<script src="js/script.js"></script>
-		
-		<script>
-			var config = {
+		<script>  
+			var config = {  
 				apiKey: "AIzaSyCeLb593nc4IMYNMNyr34GXwAKPK4nR_-Y",
 				authDomain: "web-app-ef470.firebaseapp.com",
 				databaseURL: "https://web-app-ef470.firebaseio.com",
 				projectId: "web-app-ef470",
 				storageBucket: "web-app-ef470.appspot.com",
 				messagingSenderId: "42779219816"
-			};
-			firebase.initializeApp(config);
-		</script>
+			};  
+			firebase.initializeApp(config);  
+		</script>  
+
+		
+		<script type="text/javascript">  
+			var uiConfig = {  
+				signInSuccessUrl: 'loggedIn.html',  
+				signInOptions: [  
+					firebase.auth.GoogleAuthProvider.PROVIDER_ID,  
+					firebase.auth.EmailAuthProvider.PROVIDER_ID  
+				],  
+			tosUrl: '<your-tos-url>'  
+			};  
+			var ui = new firebaseui.auth.AuthUI(firebase.auth());  
+			ui.start('#firebaseui-auth-container', uiConfig);  
+		</script>  
+		
 		
 		
     </body>
