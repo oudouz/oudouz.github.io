@@ -15,7 +15,7 @@ var uiConfig = {
 		firebase.auth.FacebookAuthProvider.PROVIDER_ID,  
 		firebase.auth.EmailAuthProvider.PROVIDER_ID  
 	],  
-tosUrl: '<your-tos-url>'  
+tosUrl: './terms.html'  
 };  
 var ui = new firebaseui.auth.AuthUI(firebase.auth());  
 ui.start('#firebaseui-auth-container', uiConfig);  
