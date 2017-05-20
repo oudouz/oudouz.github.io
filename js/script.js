@@ -9,7 +9,7 @@ var config = {
 firebase.initializeApp(config);  
 
 var uiConfig = {  
-	signInSuccessUrl: 'services.html',  
+	signInSuccessUrl: 'profile.html',  
 	signInOptions: [  
 		firebase.auth.GoogleAuthProvider.PROVIDER_ID,  
 		firebase.auth.FacebookAuthProvider.PROVIDER_ID,  
