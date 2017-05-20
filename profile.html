@@ -25,7 +25,7 @@
 						var providerData = user.providerData;
 						user.getToken().then(function(accessToken) {
               document.getElementById('profile-image').src = user.photoURL;
-              document.getElementById('user-displayname').text = user.displayName;
+              document.getElementById('user-displayname').innerHTML = user.displayName;
 						});
 					} else {
 
