@@ -25,6 +25,7 @@
 						var providerData = user.providerData;
 						user.getToken().then(function(accessToken) {
               document.getElementById('profile-image').src = user.photoURL;
+              document.getElementById('user-displayname').text = user.displayName;
 						});
 					} else {
 
@@ -54,6 +55,7 @@
             <div id="profile-image-holder">
               <img id="profile-image" src=""/>
 					  </div>
+            <h2 id="user-displayname"></h2>
 				  </div>
 				</div>
 			</div>
