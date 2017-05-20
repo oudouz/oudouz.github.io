@@ -55,13 +55,14 @@ body{
 }
 
 #profile-image-holder{
-	width: 96px;
-	height: 96px;
 	margin: 0 auto;
+	padding: 40px;
 }
 
 #profile-image-holder img{
 	width: 96px;
 	height: 96px;
 	border-radius: 50%;
+	padding: 2px;
+	border: 2px solid rgb(255, 214, 211);
 }
