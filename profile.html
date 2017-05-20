@@ -24,11 +24,7 @@
 						var phoneNumber = user.phoneNumber;
 						var providerData = user.providerData;
 						user.getToken().then(function(accessToken) {
-							console.log(user.displayName);
-							console.log(user.uid);
-							console.log(user.email);
-							console.log(user.photoURL);
-
+              document.getElementById('profile-image').src = user.photoURL;
 						});
 					} else {
 
@@ -56,7 +52,7 @@
 				 <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone">
 					<div class="demo-card-event mdl-card mdl-shadow--4dp">
             <div id="profile-image-holder">
-              <img id="profile-image" src="https://lh3.googleusercontent.com/-Ofqk_g0H9Rc/AAAAAAAAAAI/AAAAAAAABUk/7fdRneGDgLI/photo.jpg"/>
+              <img id="profile-image" src=""/>
 					  </div>
 				  </div>
 				</div>
