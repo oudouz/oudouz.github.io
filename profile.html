@@ -1,17 +1,17 @@
 <!doctype html>
 <html>
     <head>
-	
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="theme-color" content="#f44336" />
-		
+
 		<!--Google Material Design-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-amber.min.css" />
 		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-		
+
 		<link type="text/css" rel="stylesheet" href="css/style.css" />
-		
+
 		<script type="text/javascript">
 			initApp = function() {
 				firebase.auth().onAuthStateChanged(function(user) {
@@ -24,28 +24,14 @@
 						var phoneNumber = user.phoneNumber;
 						var providerData = user.providerData;
 						user.getToken().then(function(accessToken) {
-							/*document.getElementById('sign-in-status').textContent = 'Signed in';
-							document.getElementById('sign-in').textContent = 'Sign out';
-							document.getElementById('account-details').textContent = JSON.stringify({
-								displayName: displayName,
-								email: email,
-								emailVerified: emailVerified,
-								phoneNumber: phoneNumber,
-								photoURL: photoURL,
-								uid: uid,
-								accessToken: accessToken,
-								providerData: providerData
-							}, null, '  ');*/
 							console.log(user.displayName);
 							console.log(user.uid);
 							console.log(user.email);
 							console.log(user.photoURL);
-							
+
 						});
 					} else {
-						/*document.getElementById('sign-in-status').textContent = 'Signed out';
-						document.getElementById('sign-in').textContent = 'Sign in';
-						document.getElementById('account-details').textContent = 'null';*/
+
 					}
 					}, function(error) {
 						console.log(error);
@@ -55,7 +41,7 @@
 			initApp()
 		});
 		</script>
-		
+
     </head>
     <body>
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -69,18 +55,20 @@
 				<div class="mdl-grid" id="profile-info-grid">
 				 <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--12-col-phone">
 					<div class="demo-card-event mdl-card mdl-shadow--4dp">
-					</div>
+            <div id="profile-image-holder">
+              <img id="profile-image" src="https://lh3.googleusercontent.com/-Ofqk_g0H9Rc/AAAAAAAAAAI/AAAAAAAABUk/7fdRneGDgLI/photo.jpg"/>
+					  </div>
 				  </div>
 				</div>
 			</div>
 		  </main>
 		</div>
 
-		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>	
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
-		
+
 		<script src="js/script.js"></script>
-		
+
 		<script>
 		  // Initialize Firebase
 		  var config = {

@@ -53,3 +53,13 @@ body{
 .demo-card-event > .mdl-card__actions > .mdl-button {
 	color: #fff;
 }
+
+#profile-image-holder{
+	width: 96px;
+	height: 96px;
+	margin: 0 auto;
+}
+
+#profile-image-holder img{
+	border-radius: 50%;
+}
